@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #fd9500;
+  --color-dark: #3B3B3B;
+  --color-dark-muted: #424242;
+  --color-bg: #0f0f0f;
+
+  --font-heading: "Poppins", sans-serif;
+  --font-heading: "Playwrite NZ Basic", cursive;
+  --font-body: "Playwrite NZ Basic", cursive;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: white;
+}
+
+/* Utility class (if you want a specific selector instead of global var) */
+.playwrite-nz-basic {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
