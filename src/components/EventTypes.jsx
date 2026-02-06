@@ -50,36 +50,36 @@ const EventTypes = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {eventTypes.map((event, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.3 }}
-              className="group relative h-72 cursor-pointer overflow-hidden"
-            >
-              {/* Background Image */}
-              <img
-                src={event.image}
-                alt={event.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
+  {eventTypes.map((event, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="group relative h-56 sm:h-64 lg:h-72 cursor-pointer overflow-hidden"
+    >
+      <img
+        src={event.image}
+        alt={event.title}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 transition group-hover:bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/60 transition group-hover:bg-black/70"></div>
 
-              {/* Content */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-xl font-semibold tracking-wide text-white">
-                  {event.title}
-                </h3>
-              </div>
+      <div className="absolute inset-0 flex items-center justify-center px-2 text-center">
+        <h3 className="text-sm sm:text-base lg:text-xl font-semibold tracking-wide text-white">
+          {event.title}
+        </h3>
+      </div>
 
-              {/* Accent Border */}
-              <span className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-primary)] opacity-0 transition group-hover:opacity-100"></span>
-            </motion.div>
-          ))}
-        </div>
+      <span className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-primary)] opacity-0 transition group-hover:opacity-100"></span>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );

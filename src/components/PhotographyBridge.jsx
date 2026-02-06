@@ -5,35 +5,34 @@ const PhotographyBridge = () => {
   return (
     <section
       id="photography-bridge"
-      className="relative isolate w-full overflow-hidden mt-32"
+      className="relative isolate w-full overflow-hidden mt-24 md:mt-32"
     >
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1600"
+          src="https://plus.unsplash.com/premium_photo-1674235766088-80d8410f9523?q=80&w=1169&auto=format&fit=crop"
           alt="Wedding photography"
           className="h-full w-full object-cover"
         />
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Content */}
-      <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center px-6">
+      <div className="mx-auto flex min-h-[60vh] md:min-h-[70vh] max-w-7xl items-center px-5 md:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl"
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mx-auto max-w-3xl text-center md:mx-0 md:text-left"
         >
           {/* Label */}
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-[var(--color-primary)]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[var(--color-primary)] md:text-sm">
             Beyond Corporate Events
           </p>
 
           {/* Heading */}
-          <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
+          <h2 className="mb-5 font-heading text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl">
             Every Great Event Tells a Story.
             <br />
             <span className="text-[var(--color-primary)]">
@@ -41,8 +40,8 @@ const PhotographyBridge = () => {
             </span>
           </h2>
 
-          {/* Storytelling Text */}
-          <p className="mb-10 text-lg leading-relaxed text-gray-200">
+          {/* Text */}
+          <p className="mb-8 text-base leading-relaxed text-gray-200 sm:text-lg">
             While we specialize in delivering high-impact corporate events,
             our creative team also captures life’s most intimate and emotional
             moments through wedding photography. From raw emotions to timeless
@@ -52,9 +51,9 @@ const PhotographyBridge = () => {
           {/* CTA */}
           <a
             href="/photography"
-            className="inline-block rounded-md bg-[var(--color-primary)] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-[#3B3B3B] transition hover:scale-105 hover:bg-[#ffad3d]"
+            className="inline-flex items-center justify-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-xs font-semibold uppercase tracking-wide text-[#3B3B3B] transition hover:scale-105 hover:bg-[#ffad3d] sm:px-8 sm:py-4 sm:text-sm"
           >
-            Explore Our Wedding Photography Portfolio
+            Explore Wedding Photography
           </a>
         </motion.div>
       </div>

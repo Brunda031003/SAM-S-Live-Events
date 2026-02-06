@@ -3,34 +3,35 @@ import { useGesture } from '@use-gesture/react';
 
 const DEFAULT_IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Abstract art'
+    src: 'https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1200',
+    alt: 'Corporate product launch with stage lighting'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Modern sculpture'
+    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200',
+    alt: 'Corporate conference with audience and LED screens'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Digital artwork'
+    src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200',
+    alt: 'Business networking event'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Contemporary art'
+    src: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1200',
+    alt: 'Brand activation event with crowd'
   },
   {
-    src: 'https://images.unsplash.com/photo-1745965976680-d00be7dc0377?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Geometric pattern'
+    src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200',
+    alt: 'Corporate award ceremony stage'
   },
   {
-    src: 'https://images.unsplash.com/photo-1752588975228-21f44630bb3c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Textured surface'
+    src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200',
+    alt: 'Corporate team building event'
   },
   {
-    src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
-    alt: 'Social media image'
+    src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200',
+    alt: 'Corporate seminar and presentation'
   }
 ];
+
 
 const DEFAULTS = {
   maxVerticalRotationDeg: 5,
@@ -124,7 +125,7 @@ export default function DomeGallery({
   openedImageHeight = '400px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
-  grayscale = true
+  grayscale = false
 }) {
   const rootRef = useRef(null);
   const mainRef = useRef(null);

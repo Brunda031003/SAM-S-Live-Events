@@ -62,21 +62,92 @@ export default function DynamicMasonrySection() {
   }, []);
 
   const items = [
-    { id: '1', img: 'https://picsum.photos/id/1015/600/900?grayscale', url: 'https://example.com/one', height: 400 },
-    { id: '2', img: 'https://picsum.photos/id/1011/600/750?grayscale', url: 'https://example.com/two', height: 250 },
-    { id: '3', img: 'https://picsum.photos/id/1020/600/800?grayscale', url: 'https://example.com/three', height: 600 },
-    { id: '4', img: 'https://images.unsplash.com/photo-1566827164985-f39da7c6c550?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D', url: 'https://unsplash.com', height: 500 },
-    { id: '5', img: 'https://images.unsplash.com/photo-1632749696383-6afcf89b397e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D', url: 'https://unsplash.com', height: 480 },
-    { id: '6', img: 'https://media.istockphoto.com/id/1217553621/photo/morning-in-foggy-mountains-black-and-white-mountain-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=KeYdAgblZJZyd752R_O81w2ngjQZ9GEupuJx9sBMINI=', url: 'https://istockphoto.com', height: 460 },
-    { id: '7', img: 'https://images.unsplash.com/photo-1499428665502-503f6c608263?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHwwfHx8MA%3D%3D', url: 'https://unsplash.com', height: 420 },
-    { id: '8', img: 'https://plus.unsplash.com/premium_photo-1673621329410-e4ef5df05b69?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHwwfHx8MA%3D%3D', url: 'https://unsplash.com', height: 440 },
-    { id: '9', img: 'https://images.unsplash.com/photo-1548516173-3cabfa4607e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8MHx8fDA%3D', url: 'https://unsplash.com', height: 460 },
-    { id: '10', img: 'https://images.unsplash.com/photo-1532517308734-0565178471d2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8MHx8fDA%3D', url: 'https://unsplash.com', height: 460 },
-    { id: '11', img: 'https://images.unsplash.com/photo-1464423163665-75e82891f301?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHx8MHx8fDA%3D', url: 'https://unsplash.com', height: 460 },
-    { id: '12', img: 'https://media.istockphoto.com/id/1135480451/photo/man-portrait-in-black-and-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=nHZX8UyO73av3s0MuexBseYTJp9zG4sBFi1yQoPyRK0=', url: 'https://istockphoto.com', height: 520 },
-    { id: '13', img: 'https://media.istockphoto.com/id/1135480451/photo/man-portrait-in-black-and-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=nHZX8UyO73av3s0MuexBseYTJp9zG4sBFi1yQoPyRK0=', url: 'https://istockphoto.com', height: 520 },
-    { id: '14', img: 'https://media.istockphoto.com/id/1135480451/photo/man-portrait-in-black-and-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=nHZX8UyO73av3s0MuexBseYTJp9zG4sBFi1yQoPyRK0=', url: 'https://istockphoto.com', height: 520 }
-  ];
+  {
+    id: '1',
+    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200',
+    url: 'https://example.com/one',
+    height: 400
+  },
+  {
+    id: '2',
+    img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200',
+    url: 'https://example.com/two',
+    height: 250
+  },
+  {
+    id: '3',
+    img: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1200',
+    url: 'https://example.com/three',
+    height: 600
+  },
+  {
+    id: '4',
+    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 500
+  },
+  {
+    id: '5',
+    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 480
+  },
+  {
+    id: '6',
+    img: 'https://images.unsplash.com/photo-1689627528687-e7c118c1e3c8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8',
+    url: 'https://istockphoto.com',
+    height: 460
+  },
+  {
+    id: '7',
+    img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 420
+  },
+  {
+    id: '8',
+    img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 440
+  },
+  {
+    id: '9',
+    img: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 460
+  },
+  {
+    id: '10',
+    img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 460
+  },
+  {
+    id: '11',
+    img: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200',
+    url: 'https://unsplash.com',
+    height: 460
+  },
+  {
+    id: '12',
+    img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 520
+  },
+  {
+    id: '13',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 520
+  },
+  {
+    id: '14',
+    img: 'https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 520
+  }
+];
+
 
   if (error) {
     return (
@@ -93,9 +164,9 @@ export default function DynamicMasonrySection() {
   const Masonry = Comp;
 
   return (
-    <div className="w-full px-8 md:px-12 lg:px-24 flex flex-col items-center" style={{ height: 800 }}>
-      <div className="mb-8">
-        <h2 className="text-5xl md:text-6xl font-bold text-center text-white">Portfolio</h2>
+    <div className="w-full px-4 py-12 md:px-8 md:py-16 lg:px-24 flex flex-col items-center min-h-[600px] md:min-h-[800px]">
+      <div className="mb-6 md:mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white">Portfolio</h2>
       </div>
       <Masonry
         items={items}

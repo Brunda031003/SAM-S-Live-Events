@@ -1,32 +1,55 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME VARIABLES
+========================= */
 @theme {
   --color-primary: #fd9500;
   --color-dark: #3B3B3B;
   --color-dark-muted: #424242;
   --color-bg: #0f0f0f;
 
-  --font-heading: "Poppins", sans-serif;
   --font-heading: "Playwrite NZ Basic", cursive;
   --font-body: "Playwrite NZ Basic", cursive;
 }
 
+/* =========================
+   GLOBAL RESET (CRITICAL)
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 THIS FIXES THE RIGHT GAP */
+}
+
+/* =========================
+   BASE STYLES
+========================= */
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   color: white;
 }
 
-/* Utility class (if you want a specific selector instead of global var) */
-.playwrite-nz-basic {
-  font-family: "Playwrite NZ Basic", cursive;
-  font-optical-sizing: auto;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+/* Offset for fixed navbar */
 section {
   scroll-margin-top: 96px;
+}
+
+/* Optional utility */
+.playwrite-nz-basic {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
 }

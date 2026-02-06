@@ -23,18 +23,18 @@ const App = () => {
 
       {/* Temporarily disabled heavy/experimental galleries to debug blank page
           Uncomment once the app is confirmed working in the browser. */}
-      {false && (
-        <div style={{ width: '100vw', height: '100vh' }}>
+      
+        {/* <div style={{ width: '100vw', height: '100vh' }} className="bg-[var(--color-bg)]">
           <DomeGallery
             fit={0.8}
             minRadius={600}
             maxVerticalRotationDeg={0}
             segments={34}
             dragDampening={2}
-            grayscale
+            grayscale={false}
           />
-        </div>
-      )}
+        </div> */}
+      
 
       {/* Dynamically load Masonry to avoid import-time errors */}
       <DynamicMasonrySection />
