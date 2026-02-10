@@ -117,6 +117,12 @@ const Masonry = ({
     });
   }, [columns, items, width]);
 
+  const gridHeight = useMemo(() => {
+    if (!grid.length) return 0;
+    const maxY = Math.max(...grid.map(item => item.y + item.h));
+    return Math.ceil(maxY + 16);
+  }, [grid]);
+
   const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
@@ -190,7 +196,11 @@ const Masonry = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full">
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{ height: gridHeight || undefined }}
+    >
       {grid.map(item => (
         <div
           key={item.id}

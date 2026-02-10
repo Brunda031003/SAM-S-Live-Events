@@ -50,14 +50,14 @@ const ContactUs = () => {
 
           {/* Instagram */}
           <a
-            href="https://instagram.com/samsliveevents"
+            href="https://www.instagram.com/samsmedia.in?igsh=bWd0dmc0amcycXE0"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-4 transition"
           >
             <Instagram className="h-6 w-6 text-[var(--color-primary)]" />
             <span className="text-lg group-hover:text-[var(--color-primary)] transition">
-              @samsliveevents
+              @samsmedia.in
             </span>
           </a>
 

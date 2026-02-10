@@ -69,7 +69,7 @@ const Services = () => {
           </div>
 
           {/* MOBILE VIEW */}
-          <div className="grid gap-10 sm:grid-cols-2 lg:hidden">
+          <div className="grid grid-cols-2 gap-6 sm:gap-10 lg:hidden">
             {services.map((service, i) => (
               <motion.div
                 key={i}

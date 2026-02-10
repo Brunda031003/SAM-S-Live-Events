@@ -25,6 +25,8 @@ const Navbar = () => {
   const linkClasses =
     "block py-3 text-lg font-medium hover:text-[var(--color-primary)]";
 
+  const logoSrc = `${import.meta.env.BASE_URL}images/Logo.jpg`;
+
   return (
     <header
       className={`fixed top-0 z-[9999] w-full transition-all duration-300 ${
@@ -36,16 +38,20 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-6 md:py-4">
         
         {/* Logo */}
-        <a
-          href="/"
-          className="font-heading text-lg font-bold tracking-wide text-white md:text-xl"
-        >
-          <span className="md:hidden">Sams Live</span>
-          <span className="hidden md:inline">Sams Live Events</span>
+        <a href="/" className="inline-flex items-center">
+          <img
+            src={logoSrc}
+            alt="Sams Live Events"
+            className="h-8 w-auto md:h-10"
+            loading="eager"
+          />
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white">
+          <a href="#" className="hover:text-[var(--color-primary)]">
+            Home
+          </a>
           <a href="#about" className="hover:text-[var(--color-primary)]">
             About
           </a>
@@ -84,6 +90,9 @@ const Navbar = () => {
         }`}
       >
         <nav className="flex flex-col px-6 pb-6 text-white">
+          <a href="#" onClick={() => setMenuOpen(false)} className={linkClasses}>
+            Home
+          </a>
           <a href="#about" onClick={() => setMenuOpen(false)} className={linkClasses}>
             About
           </a>

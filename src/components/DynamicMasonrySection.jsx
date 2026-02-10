@@ -145,7 +145,25 @@ export default function DynamicMasonrySection() {
     img: 'https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200',
     url: 'https://istockphoto.com',
     height: 520
-  }
+  },
+  {
+    id: '15',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 200
+  },
+  {
+    id: '16',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 200
+  },
+  {
+    id: '17',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200',
+    url: 'https://istockphoto.com',
+    height: 200
+  },
 ];
 
 
@@ -164,7 +182,7 @@ export default function DynamicMasonrySection() {
   const Masonry = Comp;
 
   return (
-    <div className="w-full px-4 py-12 md:px-8 md:py-16 lg:px-24 flex flex-col items-center min-h-[600px] md:min-h-[800px]">
+    <div id="portfolio" className="w-full px-4 py-12 md:px-8 md:py-16 lg:px-24 flex flex-col items-center min-h-[600px] md:min-h-[800px]">
       <div className="mb-6 md:mb-8">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white">Portfolio</h2>
       </div>

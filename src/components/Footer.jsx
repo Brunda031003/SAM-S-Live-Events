@@ -12,15 +12,15 @@ const Footer = () => {
 
         {/* Right: Copyright & Credit */}
         <div className="flex flex-col items-center gap-1 md:flex-row md:gap-3">
-          <span>© 2026 All rights reserved.</span>
+          <span>© 2026 All rights reserved</span>
           <span className="hidden md:inline">|</span>
           <a
-            href="https://instagram.com/firstecho"
+            href="https://www.instagram.com/firstecho.in?igsh=MmRoNDB4Z2R2aGU="
             target="_blank"
             rel="noreferrer"
             className="text-gray-300 hover:text-[var(--color-primary)]"
           >
-            Designed & Developed by <span className="font-medium">First Echo</span>
+            Designed & Developed by <span className="font-medium underline">First Echo</span>
           </a>
         </div>
       </div>
