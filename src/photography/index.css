@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

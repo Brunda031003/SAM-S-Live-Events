@@ -61,12 +61,12 @@ const Navbar = () => {
           <a href="#event-types" className="hover:text-[var(--color-primary)]">
             Expertise
           </a>
-                        {/* <a
-                            href="/photography"
-                            className="hover:text-[var(--color-primary)]"
-                        >
-                            Photography
-                        </a> */}
+          {/* <a
+            href={`${import.meta.env.BASE_URL}photography`}
+            className="hover:text-[var(--color-primary)]"
+          >
+            Photography
+          </a> */}
           <a href="#contact" className="hover:text-[var(--color-primary)]">
             Contact
           </a>
@@ -102,9 +102,9 @@ const Navbar = () => {
           <a href="#event-types" onClick={() => setMenuOpen(false)} className={linkClasses}>
             Expertise
           </a>
-                        {/* <a href="/photography" onClick={() => setMenuOpen(false)} className={linkClasses}>
-                            Photography
-                        </a> */}
+          {/* <a href={`${import.meta.env.BASE_URL}photography`} onClick={() => setMenuOpen(false)} className={linkClasses}>
+            Photography
+          </a> */}
           <a href="#contact" onClick={() => setMenuOpen(false)} className={linkClasses}>
             Contact
           </a>

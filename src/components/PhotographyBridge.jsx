@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PhotographyBridge = () => {
   return (
@@ -49,8 +50,8 @@ const PhotographyBridge = () => {
           </p>
 
           {/* CTA Button */}
-          <a
-            href="/photography"
+          <Link
+            to="/photography"
             className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#fd9500] to-[#ffb347] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-[#3B3B3B] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
           >
             {/* Glow */}
@@ -63,7 +64,7 @@ const PhotographyBridge = () => {
             <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

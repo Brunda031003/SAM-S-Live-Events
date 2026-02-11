@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Landing from './components/Landing.jsx'
 import AboutUs from './components/AboutUs.jsx'
 import Services from './components/Services.jsx'
@@ -9,9 +10,22 @@ import PhotographyBridge from './components/PhotographyBridge.jsx'
 import ContactUs from './components/ContactUs.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import PhotographyApp from "./photography/PhotographyApp";
+
+// Scroll restoration wrapper
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 // Masonry will be dynamically imported to avoid import-time module resolution errors
 
-const App = () => {
+const Home = () => {
   return (
     <>
       {/* Render primary site sections first to isolate rendering issues */}
@@ -45,4 +59,14 @@ const App = () => {
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter basename="/SAM-S-Live-Events">
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/photography/*" element={<PhotographyApp />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
